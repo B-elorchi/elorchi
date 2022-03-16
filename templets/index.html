@@ -1,0 +1,471 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Protofolio</title>
+		<!-- ==============Font Awseam Link ===================-->
+		<link
+			rel="stylesheet"
+			href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+		/>
+		<!-- <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+			integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/> -->
+
+		<!-- ============== Normalize Css File ===================-->
+		<link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+		<!-- ============== Custom Css File ===================-->
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<!-- ========================================================================= -->
+		<!-- Swiper Js-->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+		/>
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+		<!-- ============== typed.Js Link ===================-->
+
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+			integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<!-- ============== JQuery File ===================-->
+		<script src="{% static '/js/jQuery.js' %}"></script>
+	</head>
+	<body>
+		<div class="over-lay"></div>
+		<a href="#top"><i class="uil uil-angle-double-up to-top"></i></a>
+		<!-- -------------Start Header Section------------ -->
+		<header class="header dark-header" id="header">
+			<div class="container">
+				<div class="nav-top">
+					<a href="{% url 'home' %}" class="logo">Elorchi</a>
+
+					<ul class="nav-head">
+						<li><a href="#top">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#services">Servies</a></li>
+						<li><a href="#protofolio">Protofolio</a></li>
+						<li><a href="#contact">Contact me</a></li>
+					</ul>
+
+					<div class="nav-mobile">
+						<a href="#header" title="Home"
+							><i class="uil uil-estate"></i><br />Home</a
+						>
+
+						<a href="#"><i class="uil uil-user"></i><br />About</a>
+
+						<a href="#"><i class="uil uil-file-alt"></i><br />Skills</a>
+
+						<a href="#"><i class="uil uil-briefcase-alt"></i><br />Servies</a>
+
+						<a href="#"><i class="uil uil-scenery"></i><br />Protofolio</a>
+
+						<a href="#"><i class="uil uil-message"></i><br />Contact me</a>
+					</div>
+
+					<!-- <div class="dark-mod">
+						<a href="#"><i class="uil uil-moon dark-mode"></i></a>
+
+						<i class="uil uil-bars" id="menu-mob"></i>
+					</div> -->
+				</div>
+			</div>
+		</header>
+		<!-- -------------End Header Section------------ -->
+		<!-- ========================================================================= -->
+		<!-- -------------Start Main Section------------ -->
+		<main class="main" id="main">
+			<div class="container">
+				<div class="flex-col">
+					<div class="main-img">
+						<div class="icons-media">
+							<a href="">
+								<i class="uil uil-facebook-f"></i>
+							</a>
+							<a href="">
+								<i class="uil uil-whatsapp"></i>
+							</a>
+							<a href="">
+								<i class="uil uil-github-alt"></i>
+							</a>
+							<a href="">
+								<i class="uil uil-linkedin-alt"></i>
+							</a>
+						</div>
+						<div class="images">
+							<img src="{% static '/img/bg.png' %}" alt="" width="200px" />
+						</div>
+					</div>
+					<div class="content">
+						<h1 class="black">hello I'am <span>Elorchi Brahim</span></h1>
+						<h3 class="black">And I'am <span class="typed"></span></h3>
+						<p class="black">
+							High level in web development and producing quality work , And an
+							unbelievable level in Back end with django
+						</p>
+
+						<a href="" class="contact-me btn"
+							>Contact me<i class="uil uil-message"></i
+						></a>
+						<div class="contact">
+							<form action="{% url 'cont' %}" method="post">
+								{% csrf_token %}
+								<input type="text" placeholder="your name" name="name">
+								<input type="email" placeholder="your Email" name="email">
+								<textarea name="msg"  cols="30" rows="10"></textarea>
+								<button type="submit">Send Message</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- -------------End Main Section------------ -->
+		<!-- ========================================================================= -->
+		<!-- Start Section About me -->
+		<div class="about rv" id="about">
+			<div class="about-box">
+				<div class="head">
+					<h1 class="heading">About Me</h1>
+					<h5 class="heading-2">My introduction</h5>
+				</div>
+				<div class="about-flex">
+					<div class="image">
+						<img src="{% static '/img/bg.png' %}" alt="" />
+					</div>
+
+					<div class="about-content">
+						<p class="black">
+							Hello, my name is Ibrahim Elorchi, and i'm 21years old, I manage a
+							graduate of the Office of Vocational Training and Employment
+							Recovery, the Division of Informatics Development in Morocco. I
+							can do high-quality projects in a short time
+						</p>
+						<div class="ex">
+							<div class="flex">
+								<span class="black">1+</span>
+								<p class="black">Expriance disign</p>
+							</div>
+							<div class="flex">
+								<span class="black">1+</span>
+								<p class="black">Web Devloper</p>
+							</div>
+							<div class="flex">
+								<span class="black">0+</span>
+								<p class="black">Backend Devloper</p>
+							</div>
+						</div>
+						<a href="{% static 'cv.pdf' %}" class="btn"
+							>Download Cv<i class="uil uil-download-alt download"></i
+						></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Section About me -->
+		<!----========================================================================= -->
+		<!-- Start Section Skills -->
+		<section class="skills rv" id="skills">
+			<div class="head">
+				<h1 class="heading">Skills</h1>
+				<h5 class="heading-2 black">my technical level</h5>
+			</div>
+			<div class="skills-flex">
+				<div class="col-1">
+					<div class="controller">
+						<h3><i class="uil uil-arrow"></i> Front End Devloper</h3>
+						<i class="uil uil-angle-down slid-down"></i>
+					</div>
+
+					<div class="panel">
+						{% for item in frontend %}
+						<div class="skils-box">
+							<div class="item">
+								<span>{{item.name}}</span>
+								<span>{{item.teau}}%</span>
+							</div>
+							<div class="col">
+								<span class="bg" data-width="{{item.teau}}%"></span>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="col-1">
+					<div class="controller">
+						<h3><i class="uil uil-brackets-curly"></i> Backend End Devloper</h3>
+						<i class="uil uil-angle-down slid-down"></i>
+					</div>
+
+					<div class="panel">
+						{% for item in backend %}
+						<div class="skils-box">
+							<div class="item">
+								<span>{{item.name}}</span>
+								<span>{{item.teau}}%</span>
+							</div>
+							<div class="col">
+								<span class="bg" data-width="{{item.teau}}%"></span>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				<div class="col-1">
+					<div class="controller">
+						<h3><i class="uil uil-code-branch"></i>Tools</h3>
+						<i class="uil uil-angle-down slid-down"></i>
+					</div>
+
+					<div class="panel">
+						{% for item in tools %}
+						<div class="skils-box">
+							<div class="item">
+								<span>{{item.name}}</span>
+								<span>{{item.teau}}%</span>
+							</div>
+							<div class="col">
+								<span class="bg" data-width="{{item.teau}}%"></span>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Section Skills -->
+		<!----========================================================================= -->
+
+		<!-- Start Section Servises -->
+		<section class="services rv" id="services">
+			<div class="head">
+				<h1 class="heading">Servises</h1>
+				<h5 class="heading-2">what i offer</h5>
+			</div>
+			<div class="services-box">
+				<div class="col-2">
+					<i class="uil uil-brackets-curly black"></i><br />
+					<h2 class="black">Backend Devloper</h2>
+					<button class="btn-front">
+						<span>Learn more</span><i class="uil uil-arrow-circle-right"></i>
+					</button>
+				</div>
+				<div class="col-2">
+					<i class="uil uil-arrow black"></i><br />
+					<h2 class="black">Front End Devloper</h2>
+					<button class="btn-back">
+						<span>Learn more</span><i class="uil uil-arrow-circle-right"></i>
+					</button>
+				</div>
+				<div class="col-2">
+					<i class="uil uil-code-branch black"></i><br />
+					<h2 class="black">More Tools</h2>
+					<button class="btn-tools">
+						<span>Learn more</span><i class="uil uil-arrow-circle-right"></i>
+					</button>
+				</div>
+			</div>
+			<div class="box-info front">
+				<i class="uil uil-times close"></i>
+				<h1>Front End Dev</h1>
+				<ul>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+				</ul>
+			</div>
+			<div class="box-info back">
+				<i class="uil uil-times close"></i>
+				<h1>Backend Devloper</h1>
+				<ul>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+				</ul>
+			</div>
+			<div class="box-info tools">
+				<i class="uil uil-times close"></i>
+				<h1>UI / UX disigner</h1>
+				<ul>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+					<li>
+						<i class="uil uil-check-circle"></i> I create website ftron end
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!-- End Section Servises -->
+		<!----========================================================================= -->
+		<!-- Start  Section Protofolio -->
+		<section class="protofolio rv" id="protofolio">
+			<div class="head">
+				<h1 class="heading">Protofolio</h1>
+				<h5 class="heading-2">my works</h5>
+			</div>
+			<!-- Swiper -->
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					{% for works in myworks %}
+					<div class="swiper-slide">
+						<div class="box">
+							<img src="{{works.images.url}}" alt="" />
+
+							<div class="info">
+								<h4 class="black">{{works.head}}</h4>
+								<p class="black">{{works.des}}</p>
+								<a href="{{works.url}}" class="black"
+									>Demo <i class="uil uil-arrow-circle-right"></i
+								></a>
+							</div>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+
+			<!-- Swiper JS -->
+		</section>
+		<!-- End Section Servises -->
+		<!----========================================================================= -->
+		<!-- Start Section Contact -->
+		<section class="contact rv" id="contact">
+			<div class="head">
+				<h1 class="heading">Contact Me</h1>
+				<h5 class="heading-2">contact</h5>
+			</div>
+			<div class="flex">
+				<div class="call-info">
+					<div class="info-box">
+						<i class="uil uil-phone-alt black"></i>
+						<div class="col-3">
+							<h5 class="black">Call me</h5>
+							<h6 class="black">0608986772</h6>
+						</div>
+					</div>
+					<div class="info-box">
+						<i class="uil uil-envelope black"></i>
+						<div class="col-3">
+							<h5 class="black">Email</h5>
+							<h6 class="black">brahimelorchi1937@gmail.com</h6>
+						</div>
+					</div>
+					<div class="info-box">
+						<i class="uil uil-location-pin-alt black"></i>
+						<div class="col-3">
+							<h5 class="black">Location</h5>
+							<h6 class="black">Casablanca maarif</h6>
+						</div>
+					</div>
+				</div>
+				<div class="contact-me">
+					<form action="{% url 'contact' %}" method="POST">
+						{% csrf_token %}
+						<div class="col-4">
+							<input type="text" placeholder="your Name" name="name" />
+							<input type="email" placeholder="your Email" name="email" />
+							<input type="text" placeholder="Subject" name="project" />
+						</div>
+						<textarea
+							name="message"
+							cols="30"
+							rows="10"
+							placeholder="message"
+							
+						></textarea>
+						<button type="submit" class="black">
+							Contact me <i class="uil uil-message"></i>
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!-- End Section Contact -->
+		<!----========================================================================= -->
+		<!-- -------------Start Footer Section------------ -->
+		<footer class="footer rv">
+			<div class="f-flex">
+				<div class="col-5">
+					<a href="#top">
+						<h1>Elorchi Brahim</h1>
+					</a>
+					<h3>I'am <span class="typed-2"></span></h3>
+				</div>
+				<div class="col-6">
+					<a href="#services">Services</a>
+					<a href="#protofolio">Protofolio</a>
+					<a href="#contact">Contact me</a>
+				</div>
+				<div class="col-7">
+					<a href="">
+						<i class="uil uil-facebook-f"></i>
+					</a>
+					<a href="">
+						<i class="uil uil-whatsapp"></i>
+					</a>
+					<a href="">
+						<i class="uil uil-github-alt"></i>
+					</a>
+					<a href="">
+						<i class="uil uil-linkedin-alt"></i>
+					</a>
+				</div>
+			</div>
+			<p>&copy; Elorchi Brahim All Right Receved</p>
+		</footer>
+		<!-- -------------End Footer Section------------ -->
+		<!-- ========================================================================= -->
+
+		<!-- ============== Custom Js File ===================-->
+		<script src="{% static 'js/main.js'%}"></script>
+	</body>
+</html>

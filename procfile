@@ -1,0 +1,1 @@
+web: gunicorn protofolio.wsgi --log-file -
