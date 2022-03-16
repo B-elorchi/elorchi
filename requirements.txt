@@ -6,7 +6,6 @@ dj-database-url==0.5.0
 Django==4.0.1
 django-credit-cards==0.4.1
 django-heroku==0.3.1
-django-mssql-backend==2.8.1
 filelock==3.6.0
 gunicorn==20.1.0
 Pillow==9.0.0
@@ -14,7 +13,6 @@ platformdirs==2.5.1
 psycopg2==2.9.3
 psycopg2-binary==2.9.3
 pycodestyle==2.8.0
-pyodbc==4.0.32
 six==1.16.0
 sqlparse==0.4.2
 toml==0.10.2
