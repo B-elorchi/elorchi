@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import imp
 from pathlib import Path
 import os
-
+import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3ux+-^22^-m=qvlqc@mc#klv#9_9@ck6t$7vzdg=)jf)cg^*3q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'elorchi.herokuapp.com']
+ALLOWED_HOSTS = ['elorchi.herokuapp.com']
 
 
 # Application definition
@@ -92,22 +92,17 @@ WSGI_APPLICATION = 'protofolio.wsgi.application'
 #                     },
 #     }
 # }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dalut3oqvonsrf',
+        'USER':'zwazaimyoycelr',
+        'PASSWORD' : '68edb4b82bb1e520f4a01b28cbd26d180f062f93ef01f007299d66f44a3b02d6',
+        'HOST':'ec2-63-34-223-144.eu-west-1.compute.amazonaws.com',
+        'PORT':'5432',
     }
 }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'protofolio',
-#         'USER':'postgres',
-#         'PASSWORD' : 'king',
-#         'HOST':'localhost',
-#         'PORT':'5432',
-#     }
-# }
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -148,6 +143,7 @@ STATIC_URL = 'protofolio/static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR, 'protofolio/static')
 ]
+django_heroku.settings(locals())
 
 # Media 
 MEDIA_URL = 'media/'
