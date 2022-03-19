@@ -101,6 +101,7 @@ DATABASES = {
         'PASSWORD' : '68edb4b82bb1e520f4a01b28cbd26d180f062f93ef01f007299d66f44a3b02d6',
         'HOST':'ec2-63-34-223-144.eu-west-1.compute.amazonaws.com',
         'PORT':'5432',
+        'DATABASE_URL':'postgres://zwazaimyoycelr:68edb4b82bb1e520f4a01b28cbd26d180f062f93ef01f007299d66f44a3b02d6@ec2-63-34-223-144.eu-west-1.compute.amazonaws.com:5432/dalut3oqvonsrf',
     }
 }
 # Password validation
