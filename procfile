@@ -1,2 +1,1 @@
-release: python manage.py migrate
-web: gunicorn protofolio.wsgi --log-file -
+web: gunicorn protofolio.wsgi
